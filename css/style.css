@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&family=Lato:wght@300;400;700&family=Smooch+Sans:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;700&family=Lato:wght@100;300;400;700&family=Open+Sans&family=Roboto&family=Smooch+Sans:wght@100;300;400;700&display=swap");
 :root {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -17,15 +17,15 @@
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   font-family: "Lato", sans-serif;
-  background: #2b6495;
+  background: #c21500;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#fffde4), to(#2b5376));
-  background: linear-gradient(to left, #fffde4, #2b5376);
+  background: -webkit-gradient(linear, right top, left top, from(#00416a), to(#e4e5e6));
+  background: linear-gradient(to left, #00416a, #e4e5e6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  height: 100vh;
 }
 
 h1 {
@@ -34,10 +34,10 @@ h1 {
 }
 
 .main {
-  background-color: white;
   width: 80%;
   margin: 10% auto;
   padding: 2em;
+  background-color: #fff;
 }
 
 .main .container {
@@ -75,10 +75,10 @@ h1 {
   background-color: #0d6efd;
   min-height: 60px;
   font-size: 1.1rem;
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
+  border-radius: 0 0.3rem 0.3rem 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .main label div:hover {
@@ -95,41 +95,40 @@ h1 {
           transform: translateX(10px);
 }
 
-.main input {
+.main label input {
   display: block;
   width: 80%;
   background-color: #bee5e3;
   padding: 0.5em;
   min-height: 60px;
   font-size: 1.1rem;
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  border-radius: 0.3rem 0 0 0.3rem;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
 
-.main input::-webkit-input-placeholder {
+.main label input::-webkit-input-placeholder {
   color: #292a2b;
 }
 
-.main input:-ms-input-placeholder {
+.main label input:-ms-input-placeholder {
   color: #292a2b;
 }
 
-.main input::-ms-input-placeholder {
+.main label input::-ms-input-placeholder {
   color: #292a2b;
 }
 
-.main input::placeholder {
+.main label input::placeholder {
   color: #292a2b;
 }
 
-.main input:focus {
+.main label input:focus {
   border: 5px solid transparent;
   border-radius: 0.3rem;
-  background-color: white;
-  -webkit-box-shadow: 0 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-          box-shadow: 0 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .main .alert {
@@ -149,15 +148,15 @@ h1 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-transition: all 0, 3s linear;
-  transition: all 0, 3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
-.main .alert .fa-square-xmark {
-  font-size: 1.9rem;
+.main .alert .fa-rectangle-xmark {
+  font-size: 1.5rem;
 }
 
-.main .alert .fa-square-xmark:hover {
+.main .alert .fa-rectangle-xmark:hover {
   color: #292a2b;
 }
 
@@ -170,32 +169,32 @@ table {
 }
 
 table tr {
-  background: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
 table tr:nth-of-type(odd) {
-  background: #e9e9e9;
+  background-color: #e9e9e9;
 }
 
 table th {
-  background: #2980b9;
-  padding: 0.5em;
-  font-weight: fWeight(bold);
+  background-color: #2980b9;
+  padding: .5em;
+  font-weight: 700;
   font-size: 1.5rem;
   text-transform: capitalize;
 }
 
 table th:first-child {
-  border-top-left-radius: 0.3rem;
+  border-radius: .3rem 0 0 0;
 }
 
 table th:last-child {
-  border-top-right-radius: 0.3rem;
+  border-radius: 0 .3rem 0 0;
 }
 
 table td {
   font-family: "Fredoka", sans-serif;
-  padding: 0.8em;
+  padding: .8em;
 }
 
 table td:first-child {
@@ -203,8 +202,7 @@ table td:first-child {
   font-size: 1.5rem;
 }
 
-table td:nth-child(2),
-table td:nth-child(3) {
+table td:nth-child(2), table td:nth-child(3) {
   width: 15%;
   font-size: 1.1rem;
 }
@@ -212,15 +210,15 @@ table td:nth-child(3) {
 table .fa-2x {
   font-size: 1.3em;
   color: #ffc107;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 table .fa-2x:hover {
-  font-size: 1.3em;
-  color: #ffca2c;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  color: #ffca2c;
 }
 
 table td:nth-child(3) .fa-2x {
@@ -233,9 +231,10 @@ table td:nth-child(3) .fa-2x:hover {
 
 table .fa-circle-check {
   color: #198754;
-  margin-right: 15px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  margin: 0 15px 0 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 table .fa-circle-check:hover {
@@ -248,8 +247,8 @@ table .fa-circle-check:hover {
   opacity: 0 !important;
   height: 0 !important;
   padding: 0 !important;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .editable {
@@ -257,6 +256,6 @@ table .fa-circle-check:hover {
   display: inline-block;
   padding: .3em;
   border-radius: .3rem;
-  margin-top: .3em;
+  margin: .3em 0 0 0;
 }
 /*# sourceMappingURL=style.css.map */
